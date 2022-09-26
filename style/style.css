@@ -1,5 +1,33 @@
-/* Golf */
 
+body, html { 
+
+    position: relative;
+    background-attachment: fixed;
+    background-image: url('../images/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Header Build */
+
+#header{
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.newPlayer{
+
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-left: 20px;
+
+}
 
 
 
