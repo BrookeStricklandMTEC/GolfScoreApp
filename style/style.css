@@ -19,15 +19,45 @@ body, html {
 
 }
 
-.newPlayer{
+.newPlayerWrapper{
 
-    
     display: flex;
     justify-content: center;
     margin-top: 60px;
     margin-left: 20px;
 
 }
+
+#newPlayerInput{
+
+    border-radius: 4px;
+    background-color: transparent;
+}
+#newPlayerInput::placeholder{
+
+    color:green; 
+
+}
+
+
+/* Column and Row Build */
+
+
+.row{
+
+
+
+
+}
+
+
+/* .column { 
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+} */
 
 
 
