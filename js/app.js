@@ -3,6 +3,31 @@
 // import scoring from '/scoring.js' 
 
 
+$('#newPlayerInput').keyup(function(a){
+
+    if (a.key == "Enter"){
+
+        let newPlayer = $('#newPlayerInput').val()
+
+        console.log(newPlayer); 
+
+        $('#newPlayer').append(
+        `
+        <div class="newPlayerWrapper"> 
+            <div id="newPlayer">
+            
+                <span id="newPlayerText"> ${$('#newPlayerInput').val()} </span>
+            
+            </div>
+        </div>
+        
+        `)
+
+    }
+
+})
+
+
 
 
 

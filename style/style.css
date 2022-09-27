@@ -92,10 +92,11 @@ body, html {
     bottom: 0;
 }
 
-.scrollable{ 
+.scrollable { 
     height: 600px; 
     overflow-y: scroll;
 }
+
 
 ::-webkit-scrollbar{
 
@@ -107,6 +108,17 @@ body, html {
 /* Column and Row Build */
 
 
+.row-sml-score{
+
+    background-color: gray;
+    border-radius: 4px;
+    padding-left: 5px; 
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
 .col-sm-1 > span{
     display: flex;
     justify-content: center;
@@ -115,8 +127,6 @@ body, html {
     color: white; 
     padding: 0px 6px 0px 6px; 
 }
-
-
 
 
 

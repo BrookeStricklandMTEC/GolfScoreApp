@@ -14,6 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/app.js"> </script> 
+        <script src="js/scoring.js"> </script> 
 
         <!--  -->
     
@@ -45,16 +46,14 @@
        </div>
 
        <div class="newPlayerWrapper"> 
-            <input type="text" placeholder="Enter New Player" id="newPlayerInput" >
+            <input type="text" placeholder="Enter New Player" id="newPlayerInput">
             <!-- Select T Shirt Color -->
-            <!-- <div id="newPlayer"> </div> -->
-            <!-- <div id="tShirt"> </div> -->
-        </div>
-
-        <div class="players" id="players">
-
-            <span id="firstPlayerText"></span>
+            <div id="newPlayer">
+        
+                <div id="newPlayerText"> </div>
             
+            </div>
+            <!-- <div id="tShirt"> </div> -->
         </div>
 
     <div class="scrollable"> 
@@ -100,25 +99,31 @@
 
                 </div>
         
-                <div class="col-sm-3" style="background-color:yellow;">
+                <div class="col">
                     
-                    <div class="row" id="row-sml"> test </div>
-                    <div class="row" id="row-sml"> test </div>
+                    <div class="row-sml-score"> New Score </div>
+                    
+                    
 
                 </div>
 
                 
-                <div class="col-sm-3" id="scoringRows" style="background-color:purple;">
+                <div class="col" id="scoringRows">
                     
-                    <span id="newPlayerText"> </span>
-                    <span> hello</span>
+                    <div class="row-sml-score"> New Score </div>
+                    
 
                 </div> 
 
-                <div class="col-sm-3" id="scoringRows" style="background-color:red;">
+                <div class="col" id="scoringRows">
                     
-                    <!-- <span id="newPlayerText"> </span> -->
-                    <span> hello</span>
+                    <div class="row-sml-score"> New Score </div>
+
+                </div> 
+
+                <div class="col" id="scoringRows">
+                    
+                    <div class="row-sml-score"> New Score </div>
 
                 </div> 
             
