@@ -1,4 +1,8 @@
 
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+
 body, html { 
 
     position: relative;
@@ -6,17 +10,34 @@ body, html {
     background-image: url('../images/background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
 
 }
 
 /* Header Build */
+
+
+.headerText{
+
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin: 10px;
+
+}
 
 #header{
 
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
+    
+}
 
+.headerRow{
+
+    position: sticky; 
+    top: 50;
 }
 
 .newPlayerWrapper{
@@ -48,13 +69,39 @@ body, html {
 
 .players > span{
 
-    border: 1px gray solid;
-    background-color: gray;
+    /* border: 1px gray solid;
+    background-color: gray; */
+
     margin-top: 20px;
     margin-bottom: 10px;
 
 }
 
+.breaker{ 
+    border: solid white;
+    height: 5px;
+    opacity: 80%; 
+    position: sticky; 
+    top:0;
+}
+.breaker2{
+    border: solid white;
+    height: 5px;
+    opacity: 80%; 
+    position: sticky; 
+    bottom: 0;
+}
+
+.scrollable{ 
+    height: 600px; 
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+
+	display: none;
+
+}
 
 
 /* Column and Row Build */
@@ -64,8 +111,11 @@ body, html {
     display: flex;
     justify-content: center;
     border: 1px solid black;
-    background-color: green;
+    background-color: #64e105;
+    color: white; 
+    padding: 0px 6px 0px 6px; 
 }
+
 
 
 

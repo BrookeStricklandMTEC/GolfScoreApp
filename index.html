@@ -20,12 +20,17 @@
         <!-- Styling -->    
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Work+Sans&display=swap" rel="stylesheet">
         <!--  -->
 
     
     </head>
 
     <body>
+
+
+        <h1 class="headerText"> GolfApp</h1>
+
 
     <div class="container">
 
@@ -41,66 +46,106 @@
 
        <div class="newPlayerWrapper"> 
             <input type="text" placeholder="Enter New Player" id="newPlayerInput" >
+            <!-- Select T Shirt Color -->
             <!-- <div id="newPlayer"> </div> -->
-            <!-- <div id="tShirtColor"> </div> -->
+            <!-- <div id="tShirt"> </div> -->
         </div>
 
         <div class="players" id="players">
 
-            <span id="firstPlayerText"> Player 1 </span>
+            <span id="firstPlayerText"></span>
             
         </div>
 
+    <div class="scrollable"> 
+     <hr class="breaker">
+            <div class="row" id="row-lrg">
+                <div class="col-sm-1" id="rowNumber" >
+                        <span> 1 </span>
+                        <br>
+                        <span> 2 </span>
+                        <br>
+                        <span> 3 </span>
+                        <br>
+                        <span> 4 </span>
+                        <br>
+                        <span> 5 </span>
+                        <br>
+                        <span> 6 </span>
+                        <br>
+                        <span> 7 </span>
+                        <br>
+                        <span> 8 </span>
+                        <br>
+                        <span> 9 </span>
+                        <br>
+                        <span> 10 </span>
+                        <br>
+                        <span> 11 </span>
+                        <br>
+                        <span> 12 </span>
+                        <br>
+                        <span> 13 </span>
+                        <br>
+                        <span> 14 </span>
+                        <br>
+                        <span> 15 </span>
+                        <br>
+                        <span> 16 </span>
+                        <br>
+                        <span> 17 </span>
+                        <br>
+                        <span> 18 </span>
+                        <br>
 
-        <div class="row" id="row-lrg">
-            <div class="col-sm-1" id="rowNumber" >
-                    <span> 1 </span>
-                    <span> 2 </span>
-                    <span> 3 </span>
-                    <span> 4 </span>
-                    <span> 5 </span>
-                    <span> 6 </span>
-                    <span> 7 </span>
-                    <span> 8 </span>
-                    <span> 9 </span>
-                    <span> 10 </span>
-                    <span> 11 </span>
-                    <span> 12 </span>
-                    <span> 13 </span>
-                    <span> 14 </span>
-                    <span> 15 </span>
-                    <span> 16 </span>
-                    <span> 17 </span>
-                    <span> 18 </span>
-
-              </div>
-
-            <div class="col-sm-3" style="background-color:yellow;">
-                 
-                <div class="row" id="row-sml"> test </div>
-                <div class="row" id="row-sml"> test </div>
-
-            </div>
-
-              
-            <div class="col-sm-3" id="scoringRows" style="background-color:purple;">
-                
-                <span id="newPlayerText"> </span>
-                <span> hello</span>
-
-            </div> 
-
-            <div class="col-sm-3" id="scoringRows" style="background-color:green;">
-                
-                <span id="newPlayerText"> </span>
-                <span> hello</span>
-
-            </div> 
+                </div>
         
-           
-           
+                <div class="col-sm-3" style="background-color:yellow;">
+                    
+                    <div class="row" id="row-sml"> test </div>
+                    <div class="row" id="row-sml"> test </div>
+
+                </div>
+
+                
+                <div class="col-sm-3" id="scoringRows" style="background-color:purple;">
+                    
+                    <span id="newPlayerText"> </span>
+                    <span> hello</span>
+
+                </div> 
+
+                <div class="col-sm-3" id="scoringRows" style="background-color:red;">
+                    
+                    <!-- <span id="newPlayerText"> </span> -->
+                    <span> hello</span>
+
+                </div> 
+            
+            
+            
+            </div>
+         <hr class="breaker2">
         </div>
-       
+        
+        <div class="currentScoreWrapper">
+
+           <div class="row">
+
+                <div class="col-sm-2"> 
+
+                    <!-- <span id="currentScore">
+                    
+                         <span id="currentScoreText"> </span> 
+                    
+                    </span> -->
+
+
+                </div>
+
+           </div>
+            
+        </div>
 
 
     </div>
