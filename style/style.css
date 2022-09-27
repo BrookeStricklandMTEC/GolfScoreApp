@@ -1,21 +1,19 @@
 
 *{
     font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth;
 }
-
 body, html { 
-
     position: relative;
     background-attachment: fixed;
     background-image: url('../images/background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
-
 }
 
 /* Header Build */
-
+/* 
+*/
 
 .headerText{
 
@@ -25,58 +23,33 @@ body, html {
     margin: 10px;
 
 }
-
 #header{
-
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
 }
-
 .headerRow{
-
     position: sticky; 
     top: 50;
 }
-
 .newPlayerWrapper{
 
     display: flex;
     justify-content: center;
     margin-top: 60px;
     margin-left: 20px;
-
 }
-
 #newPlayerInput{
-
     border-radius: 4px;
     background-color: transparent;
 }
 #newPlayerInput::placeholder{
-
     color:green; 
-
 }
-
-.players{
-
-    display: flex;
-    
-
-}
-
 .players > span{
-
-    /* border: 1px gray solid;
-    background-color: gray; */
-
     margin-top: 20px;
     margin-bottom: 10px;
-
 }
-
 .breaker{ 
     border: solid white;
     height: 5px;
@@ -91,34 +64,51 @@ body, html {
     position: sticky; 
     bottom: 0;
 }
-
 .scrollable { 
     height: 600px; 
     overflow-y: scroll;
 }
-
-
 ::-webkit-scrollbar{
-
 	display: none;
-
 }
+
 
 
 /* Column and Row Build */
-
+/* 
+*/
 
 .row-sml-score{
 
-    background-color: gray;
+    background-color: #dddd;
+    opacity: 75%;
     border-radius: 4px;
     padding-left: 5px; 
     padding-right: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+    margin-top: 3px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
 }
-
+.row-sml-current{
+    margin-left: 39px;
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 4px;
+    background-color: #dddd;
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+}
+#currentScoreWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.currentScoreDiv{
+    margin-bottom: 130px;
+    margin-top: 20px;
+}
 .col-sm-1 > span{
     display: flex;
     justify-content: center;
@@ -130,13 +120,8 @@ body, html {
 
 
 
-/* .column { 
 
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
 
-} */
 
 
 
