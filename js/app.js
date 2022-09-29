@@ -2,55 +2,68 @@
 
 // import scoring from '/scoring.js' 
 
+function getAvailableCourses() {
+fetch('https://golf-courses-api.herokuapp.com/courses/' , 
+{method: 'GET' , 
 
-$('#newPlayerInput').keyup(function(a){
+    headers: { 'Content-Type': 'application/json'},
 
-    if (a.key == "Enter"){
+})
+    .then(res => { 
+    return res.json()  
+})  
+    .then(data => console.log(data)) 
+}
+getAvailableCourses();
 
-        let newPlayer = $('#newPlayerInput').val()
+// How to make it so if there is greater than four players window.alert too many players
+$('body').ready(function(){ 
+    $('#newPlayerInput').keyup(function(a){
 
-        console.log(newPlayer); 
+        if (a.key == "Enter"){
 
-        $('#newPlayer').append(
-        `
-        <div class="newPlayerWrapper"> 
-            <div id="newPlayer">
-            
+            let newPlayer = $('#newPlayerInput').val()
+
+            console.log(newPlayer); 
+
+            $('#newPlayerText').append(
+            `
+            <div class="newPlayerWrapper"> 
                 <span id="newPlayerText"> ${$('#newPlayerInput').val()} </span>
-            
             </div>
-        </div>
-        
-        `)
+            `
+            )
+        }
 
-    }
+    //    else { 
 
+    //     window.alert('Too many players!'); 
+
+    //    }
+
+    })
 })
 
 
 
 
+// Tee Box Select
+// let teeBoxSelectHtml = ''
+// teeBoxes.forEach(function (teeBox, index) {
+//    teeBoxSelectHtml += `<option value="${index}">${teeBox.teeType.toUpperCase()}, ${
+//      teeBox.totalYards
+//    } yards</option>`
+// });
+// document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 
-//  Functions I wil need
 
-// addList
-// removeList
-// addTodo
-// removeTodo
-// markTodoAsCompleted
-// removeAllTodosCompleted
-
-
-// Player Rows
-
-    // class Player {
-    // constructor(name, id = getNextId(), scores = []) {
-    //     this.name = name;
-    //     this.id = id;
-    //     this.scores = scores;
-    //   }
-// }
-
+// Course Select
+// let courseOptionsHtml = '';
+// courses.forEach((course) => {
+//  courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
+// });
+// document.getElementById('course-select').innerHTML = courseOptionsHtml;
+ 
 
 // Notification for Finish
     // class Player {
@@ -60,16 +73,6 @@ $('#newPlayerInput').keyup(function(a){
     //       this.scores = scores;
     //     }
 //   }
-
-
-
-
-
-
-
-
-
-
 
 
 

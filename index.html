@@ -44,17 +44,38 @@
             </div>
 
        </div>
-
-       <div class="newPlayerWrapper"> 
+    <div class="ui-selectors"> 
+       <div class="newPlayerEntry"> 
             <input type="text" placeholder="Enter New Player" id="newPlayerInput">
-            <!-- Select T Shirt Color -->
-            <div id="newPlayer">
-        
-                <div id="newPlayerText"> </div>
-            
+        </div> 
+            <div id="tshirtSelect">
+                <select id="tshirt">
+                  <option value="0">Select Tshirt</option>
+                  <option value="1">Mens</option>
+                  <option value="2">Womens</option>
+                  <option value="3">Girls</option>
+                  <option value="4">Boys</option>
+                  <option value="5">Unisex</option>
+                </select>
             </div>
-            <!-- <div id="tShirt"> </div> -->
-        </div>
+    </div> 
+
+    <div class="course-group">
+        <select class="form-control" id="course-select">
+                <option value="0" for="course-select">Select Course</option>
+                <option value="1">Beginner</option>
+                <option value="2">Amateur</option>
+                <option value="3">Pro</option>
+                <option value="4">Legend</option>
+                <option value="5">Tiger Woods</option>
+        </select>
+    </div>
+      
+    <div id="newPlayerContent">
+        
+        <div id="newPlayerText"> </div>
+    
+    </div>
 
     <div class="scrollable"> 
      <hr class="breaker">
@@ -104,7 +125,6 @@
                     <div class="row-sml-score"> New Score </div>
                     <div class="row-sml-score"> New Score </div>
                     <div class="row-sml-score"> New Score </div>
-                    
 
                 </div>
 

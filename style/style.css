@@ -16,12 +16,10 @@ body, html {
 */
 
 .headerText{
-
     display: flex;
     justify-content: center;
     color: aliceblue;
     margin: 10px;
-
 }
 #header{
     margin-top: 50px;
@@ -32,7 +30,7 @@ body, html {
     position: sticky; 
     top: 50;
 }
-.newPlayerWrapper{
+.newPlayerEntry{
 
     display: flex;
     justify-content: center;
@@ -42,9 +40,22 @@ body, html {
 #newPlayerInput{
     border-radius: 4px;
     background-color: transparent;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 #newPlayerInput::placeholder{
-    color:green; 
+    color:#459805;
+}
+#tshirtSelect{
+    display: flex;
+    justify-content: center;
+    margin-left: 18px;
+    margin-bottom: 15px;
+}
+select{
+    cursor: pointer;
+    color: #459805;
+    background-color: aliceblue;
 }
 .players > span{
     margin-top: 20px;
@@ -71,7 +82,20 @@ body, html {
 ::-webkit-scrollbar{
 	display: none;
 }
+#course-select{
+    color:#459805;
+    margin-bottom: 5px;
+}
 
+/* How to make user input in line with below row at all screen sizes */
+#newPlayerText{
+
+    display: inline-flex; 
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: 15px;
+    font-size: 30px;
+}
 
 
 /* Column and Row Build */
@@ -86,7 +110,7 @@ body, html {
     padding-left: 5px; 
     padding-right: 5px;
     margin-top: 3px;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     display: flex;
     justify-content: center;
 }
@@ -121,7 +145,15 @@ body, html {
 
 
 
+@media only screen and (max-width: 750px){
 
+#rowNumber{
+   width: 50px;
+   height: max-content;  
+}
+
+
+}
 
 
 
