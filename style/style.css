@@ -50,7 +50,7 @@ body, html {
     display: flex;
     justify-content: center;
     margin-left: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 select{
     cursor: pointer;
@@ -94,7 +94,7 @@ select{
     justify-content: space-around;
     flex-direction: row;
     margin-left: 15px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
@@ -142,17 +142,11 @@ select{
     padding: 0px 6px 0px 6px; 
 }
 
-
-
-
 @media only screen and (max-width: 750px){
-
-#rowNumber{
-   width: 50px;
-   height: max-content;  
-}
-
-
+    #rowNumber{
+        width: 50px;
+        height: max-content;  
+    }
 }
 
 

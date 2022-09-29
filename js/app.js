@@ -16,13 +16,17 @@ fetch('https://golf-courses-api.herokuapp.com/courses/' ,
 }
 getAvailableCourses();
 
-// How to make it so if there is greater than four players window.alert too many players
+let i = 0
+let newPlayerCounter = i++
+
 $('body').ready(function(){ 
-    $('#newPlayerInput').keyup(function(a){
+    $('#newPlayerInput' ).keyup(function(a,i){
 
-        if (a.key == "Enter"){
+        if (a.key == "Enter" && newPlayerCounter < 4) {
 
-            let newPlayer = $('#newPlayerInput').val()
+            let newPlayer = $('#newPlayerInput').val() 
+            newPlayerCounter++
+            console.log(newPlayerCounter); 
 
             console.log(newPlayer); 
 
@@ -32,17 +36,14 @@ $('body').ready(function(){
                 <span id="newPlayerText"> ${$('#newPlayerInput').val()} </span>
             </div>
             `
+
             )
         }
 
-    //    else { 
-
-    //     window.alert('Too many players!'); 
-
-    //    }
-
     })
 })
+
+
 
 
 
