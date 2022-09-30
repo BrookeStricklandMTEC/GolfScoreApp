@@ -86,17 +86,25 @@ select{
     color:#459805;
     margin-bottom: 5px;
 }
-
-/* How to make user input in line with below row at all screen sizes */
 #newPlayerText{
-
-    display: inline-flex; 
-    justify-content: space-around;
-    flex-direction: row;
-    margin-left: 15px;
-    font-size: 25px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
 }
-
+.newPlayerWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-left: 45px;
+    margin-right: 5px;
+}
+#newPlayerContent{
+    display: flex;
+    flex-direction: row;
+}
 
 /* Column and Row Build */
 /* 
@@ -141,11 +149,35 @@ select{
     color: white; 
     padding: 0px 6px 0px 6px; 
 }
+.golfTerms{
+    width:80px; 
+}
 
 @media only screen and (max-width: 750px){
     #rowNumber{
         width: 50px;
         height: max-content;  
+    }
+    .golfTerms{
+        width: 70px;; 
+    }
+    #newPlayerText{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+    }
+    .newPlayerWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        margin-left: 20px;
+    }
+    #newPlayerContent{
+        display: flex;
+        flex-direction: row;
     }
 }
 

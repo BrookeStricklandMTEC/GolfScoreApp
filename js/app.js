@@ -5,19 +5,22 @@
 function getAvailableCourses() {
 fetch('https://golf-courses-api.herokuapp.com/courses/' , 
 {method: 'GET' , 
-
     headers: { 'Content-Type': 'application/json'},
-
 })
     .then(res => { 
     return res.json()  
 })  
-    .then(data => console.log(data)) 
+    .then(data =>  {
+       renderCourses(data.courses) 
+    })  
+    
+    // .then()
 }
 getAvailableCourses();
 
 let i = 0
 let newPlayerCounter = i++
+
 
 $('body').ready(function(){ 
     $('#newPlayerInput' ).keyup(function(a,i){
@@ -33,7 +36,7 @@ $('body').ready(function(){
             $('#newPlayerText').append(
             `
             <div class="newPlayerWrapper"> 
-                <span id="newPlayerText"> ${$('#newPlayerInput').val()} </span>
+                 ${$('#newPlayerInput').val()} 
             </div>
             `
 
@@ -43,9 +46,17 @@ $('body').ready(function(){
     })
 })
 
+// Course Select
 
-
-
+function renderCourses (courses){
+let courseOptionsHtml = '';
+courses.forEach((course) => {
+ courseOptionsHtml += `
+ <option value="${course.id}">${course.name}</option>
+ `;
+});
+document.getElementById('course-select').innerHTML = courseOptionsHtml;
+}
 
 
 // Tee Box Select
@@ -58,13 +69,6 @@ $('body').ready(function(){
 // document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 
 
-// Course Select
-// let courseOptionsHtml = '';
-// courses.forEach((course) => {
-//  courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
-// });
-// document.getElementById('course-select').innerHTML = courseOptionsHtml;
- 
 
 // Notification for Finish
     // class Player {
