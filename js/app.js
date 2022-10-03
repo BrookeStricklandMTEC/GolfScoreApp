@@ -14,60 +14,52 @@ fetch('https://golf-courses-api.herokuapp.com/courses/' ,
        renderCourses(data.courses) 
     })  
     
-    // .then()
+    .then( data => { 
+        renderTee(data.tshirtSelect)
+    })
 }
 getAvailableCourses();
+
 
 let i = 0
 let newPlayerCounter = i++
 
-
 $('body').ready(function(){ 
-    $('#newPlayerInput' ).keyup(function(a,i){
-
+    $('#newPlayerInput' ).keyup(function(a){
         if (a.key == "Enter" && newPlayerCounter < 4) {
-
             let newPlayer = $('#newPlayerInput').val() 
+            console.log(newPlayer);
             newPlayerCounter++
-            console.log(newPlayerCounter); 
-
-            console.log(newPlayer); 
-
             $('#newPlayerText').append(
             `
             <div class="newPlayerWrapper"> 
                  ${$('#newPlayerInput').val()} 
             </div>
             `
-
-            )
-        }
-
+            )}
     })
 })
 
 // Course Select
-
 function renderCourses (courses){
 let courseOptionsHtml = '';
 courses.forEach((course) => {
  courseOptionsHtml += `
- <option value="${course.id}">${course.name}</option>
- `;
+ <option value="${course.id}">${course.name}</option>`;
 });
 document.getElementById('course-select').innerHTML = courseOptionsHtml;
 }
 
-
 // Tee Box Select
-// let teeBoxSelectHtml = ''
-// teeBoxes.forEach(function (teeBox, index) {
-//    teeBoxSelectHtml += `<option value="${index}">${teeBox.teeType.toUpperCase()}, ${
-//      teeBox.totalYards
-//    } yards</option>`
+// let teeBoxSelectHtml = '';
+// function renderTee(teeBoxes){
+//     teeBoxes.forEach(function (teeBox, index) {
+//     teeBoxSelectHtml += `<option value="${index}">${teeBox.teeType.toUpperCase()}, ${
+//       teeBox.totalYards
+// } yards</option>`
 // });
-// document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
-
+// document.getElementById('tshirtSelect').innerHTML = teeBoxSelectHtml;
+// }
 
 
 // Notification for Finish
