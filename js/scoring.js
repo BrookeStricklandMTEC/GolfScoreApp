@@ -1,5 +1,11 @@
 
 
+
+par = []
+yard = []
+hcp = []
+
+
 // function golfScore(par, strokes) {
 //     if (strokes == 1) {
 //         return "Hole-in-one!";

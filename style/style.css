@@ -10,11 +10,9 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* Header Build */
 /* 
 */
-
 .headerText{
     display: flex;
     justify-content: center;
@@ -46,7 +44,7 @@ body, html {
 #newPlayerInput::placeholder{
     color:#459805;
 }
-#tshirtSelect{
+#tee-box-wrapper{
     display: flex;
     justify-content: center;
     margin-left: 18px;
@@ -105,11 +103,9 @@ select{
     display: flex;
     flex-direction: row;
 }
-
 /* Column and Row Build */
 /* 
 */
-
 .row-sml-score{
 
     background-color: #dddd;
