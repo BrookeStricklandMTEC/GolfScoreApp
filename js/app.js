@@ -13,15 +13,17 @@ function getAvailableCourses() {
         })
         .then(data => {
             renderCourses(data.courses)
+            renderTee(data.teeBox)
         })
 
         .catch(error => {
             console.log('error!');
-            console.error(error)
+            console.error(error);
         })
-
 }
 getAvailableCourses();
+
+
 
 
 
@@ -43,37 +45,46 @@ courseDiv.addEventListener('click', function () {
             })
             .catch(error => {
                 console.log('error!');
-            })
+        })
+
+
+        if (courseId == '18300') {
+        console.log('fox hollow was chosen');
+        }
+        else if (courseId == '11819'){
+        console.log('thanksgiving point was chosen')
+        }
+        else if (courseId == '19002'){
+        console.log('spanish oaks was chosen')
+        }
+        else {
+        console.log('nothing was chosen')
+        }
+
     }
     courseSelected2();
 });
 
+let teeBox = document.getElementById('tee-box-select')
 
+teeBox.addEventListener('click', function() { 
+    let teeBoxSelectHtml = document.getElementById('tee-box-select').innerHTML 
+    fetch(`https://golf-courses-api.herokuapp.com/courses/${teeBoxSelectHtml}`,
+    {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    })
+    .then(res => {
+        return res.json()
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log('error!');
+    })
+});
 
-
-
-
-// fetch('https://golf-courses-api.herokuapp.com/courses/:id' , 
-// {method: 'GET' , 
-//     headers: { 'Content-Type': 'application/json'},
-// })
-// .then(res => { 
-// return res.json()  
-// })  
-// .then(data =>  {
-// console.log(data); 
-// renderCourses(data.courses)
-// })
-
-// return Promise.all(urls.map(url => fetch(url))).then(async (res) => {
-//     const data = await Promise.all(res.map(r => r.json()))
-//     data.forEach(d => {
-//       console.log('[+]', content.data)
-//       console.log('[-]', content.meta)
-//     })
-//     return data
-
-// });
 
 
 // courseSelect();
@@ -85,10 +96,9 @@ $('body').ready(function () {
     $('#newPlayerInput').keyup(function (a) {
         if (a.key == "Enter" && newPlayerCounter < 4) {
             let newPlayer = $('#newPlayerInput').val()
-            console.log(newPlayer);
             newPlayerCounter++
             $('#newPlayerText').append(
-                `
+            `
             <div class="newPlayerWrapper"> 
                  ${$('#newPlayerInput').val()} 
             </div>
@@ -97,6 +107,7 @@ $('body').ready(function () {
         }
     })
 })
+
 // Course Select
 function renderCourses(courses) {
     let courseOptionsHtml = '';
@@ -114,17 +125,15 @@ function renderCourses(courses) {
 let teeBoxSelectHtml = ''
 function renderTee(teeBox) {
     teeBox.forEach(function (teeBox, index) {
+        let teeBoxSelectHtml = document.getElementById('tee-box-select').innerHTML 
         teeBoxSelectHtml +=
-            `
-
+        `
         <option value="${index}">${teeBox.teeType.toUpperCase()}, ${teeBox.totalYards} yards</option>
         <option value="none" selected disabled hidden> Select Tshirt </option>
-        
         `
     });
-    document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 }
-
+console.log(teeBoxSelectHtml); 
 
 // Notification for Finish
     // class Player {
