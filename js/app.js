@@ -1,5 +1,7 @@
 // Golf 
 
+// const { data } = require("jquery");
+
 // import scoring from '/scoring.js' 
 
 function getAvailableCourses() {
@@ -13,23 +15,17 @@ function getAvailableCourses() {
         })
         .then(data => {
             renderCourses(data.courses)
-            renderTee(data.teeBox)
         })
-
         .catch(error => {
-            console.log('error!');
             console.error(error);
+            console.log('error!');
         })
 }
 getAvailableCourses();
 
-
-
-
-
 let courseDiv = document.getElementById('course-select');
 
-courseDiv.addEventListener('click', function () {
+courseDiv.addEventListener('change', function () {
     let courseId = $('#course-select').val();
     function courseSelected2() {
         fetch(`https://golf-courses-api.herokuapp.com/courses/${courseId}`,
@@ -41,55 +37,18 @@ courseDiv.addEventListener('click', function () {
                 return res.json()
             })
             .then(data => {
-                console.log(data);
+                console.log(data.data.holes[0].teeBoxes);
+                renderTee(data.data.holes[0].teeBoxes);
             })
             .catch(error => {
+                console.error(error); 
                 console.log('error!');
-        })
-
-
-        if (courseId == '18300') {
-        console.log('fox hollow was chosen');
-        }
-        else if (courseId == '11819'){
-        console.log('thanksgiving point was chosen')
-        }
-        else if (courseId == '19002'){
-        console.log('spanish oaks was chosen')
-        }
-        else {
-        console.log('nothing was chosen')
-        }
-
+            })
     }
     courseSelected2();
 });
 
-let teeBox = document.getElementById('tee-box-select')
-
-teeBox.addEventListener('click', function() { 
-    let teeBoxSelectHtml = document.getElementById('tee-box-select').innerHTML 
-    fetch(`https://golf-courses-api.herokuapp.com/courses/${teeBoxSelectHtml}`,
-    {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-    })
-    .then(res => {
-        return res.json()
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.log('error!');
-    })
-});
-
-
-
 // courseSelect();
-
-
 let i = 0
 let newPlayerCounter = i++
 $('body').ready(function () {
@@ -112,7 +71,8 @@ $('body').ready(function () {
 function renderCourses(courses) {
     let courseOptionsHtml = '';
     courses.forEach((course) => {
-        courseOptionsHtml += `
+        courseOptionsHtml += 
+        `
         <option value="${course.id}">${course.name}</option>
         <option value="none" selected disabled hidden> Select Course </option>  
         `;
@@ -125,7 +85,6 @@ function renderCourses(courses) {
 let teeBoxSelectHtml = ''
 function renderTee(teeBox) {
     teeBox.forEach(function (teeBox, index) {
-        let teeBoxSelectHtml = document.getElementById('tee-box-select').innerHTML 
         teeBoxSelectHtml +=
         `
         <option value="${index}">${teeBox.teeType.toUpperCase()}, ${teeBox.totalYards} yards</option>
@@ -133,7 +92,7 @@ function renderTee(teeBox) {
         `
     });
 }
-console.log(teeBoxSelectHtml); 
+
 
 // Notification for Finish
     // class Player {
@@ -143,13 +102,3 @@ console.log(teeBoxSelectHtml);
     //       this.scores = scores;
     //     }
 //   }
-
-
-
-
-
-
-
-
-
-

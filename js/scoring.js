@@ -33,8 +33,8 @@ hcp = []
     //     }
 //   }
 
-//scoringList.innerHTML = 
-//const scoring = JSON.parse(localStorage.getItem('scoring')) || []; 
+//scoringList.innerHTML =
+//const scoring = JSON.parse(localStorage.getItem('scoring')) || [];
 //scoring.map(score => {
 // console.log(`<li> ${score.username} ${score.score} </li>`);
 //

@@ -1,188 +1,188 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+<head>
 
-        <title> Golf </title>
+    <title> Golf </title>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Links -->
-        <link rel="stylesheet" href="style/style.css"> 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/app.js" defer> </script> 
-        <script src="js/scoring.js"> </script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--  -->
-    
-        <!-- Styling -->    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Work+Sans&display=swap" rel="stylesheet">
-        <!--  -->
+    <!-- Links -->
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/app.js" defer> </script>
+    <script src="js/scoring.js"> </script>
 
-    
-    </head>
+    <!--  -->
 
-    <body>
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <!--  -->
 
 
-        <h1 class="headerText"> GolfApp</h1>
+</head>
+
+<body>
+
+
+    <h1 class="headerText"> GolfApp</h1>
 
 
     <div class="container">
 
-       <div class="headerRow">
-
-           <div class="col-lg-12" id="header">
-                <span style="font-size: 30px; color:#FF3131; cursor: pointer;" > &#8722; </span>
+        <div class="headerRow">
+            <div class="col-lg-12" id="header">
+                <span style="font-size: 30px; color:#FF3131; cursor: pointer;"> &#8722; </span>
                 <i class="material-icons" style="font-size:35px; color:aliceblue; cursor: pointer;">&#xe8b8;</i>
-                <span style="font-size: 30px; color:#39FF14; cursor: pointer;" > &#43; </span>
+                <span style="font-size: 30px; color:#39FF14; cursor: pointer;"> &#43; </span>
             </div>
-
-       </div>
-    <div class="ui-selectors"> 
-       <div class="newPlayerEntry"> 
-            <input type="text" placeholder="Enter New Player" id="newPlayerInput" minlength="1" maxlength="6">
-        </div> 
+        </div>
+        <div class="ui-selectors">
+            <div class="newPlayerEntry">
+                <input type="text" placeholder="Enter New Player" id="newPlayerInput" minlength="1" maxlength="6">
+            </div>
             <div id="tee-box-wrapper">
                 <select id="tee-box-select">
-                  <option value="0">Select Tshirt</option>
+                    <option value="0">Select Tshirt</option>
                 </select>
             </div>
-    </div> 
-
-    <div class="course-group" id="course-group-id">
-        <select class="form-control" id="course-select"></select>
-    </div>
-      
-    <div id="newPlayerContent">
-        
-        <div id="newPlayerText"> </div>
-    
-    </div>
-
-    <div class="scrollable"> 
-     <hr class="breaker">
-            <div class="row" id="row-lrg">
-                <div class="col-sm-1" id="rowNumber" >
-                        <span> 1</span>
-                        <br>
-                        <span> 2 </span>
-                        <br>
-                        <span> 3 </span>
-                        <br>
-                        <span> 4 </span>
-                        <br>
-                        <span> 5 </span>
-                        <br>
-                        <span> 6 </span>
-                        <br>
-                        <span> 7 </span>
-                        <br>
-                        <span> 8 </span>
-                        <br>
-                        <span> 9 </span>
-                        <br>
-                        <span> 10 </span>
-                        <br>
-                        <span> 11 </span>
-                        <br>
-                        <span> 12 </span>
-                        <br>
-                        <span> 13 </span>
-                        <br>
-                        <span> 14 </span>
-                        <br>
-                        <span> 15 </span>
-                        <br>
-                        <span> 16 </span>
-                        <br>
-                        <span> 17 </span>
-                        <br>
-                        <span> 18 </span>
-                        <br>
-                        <span class="golfTerms"> Par </span>
-                        <br>
-                        <span class="golfTerms"> HCP </span>
-                </div>
-        
-                <div class="col" class="scoringRows">
-                    
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-
-                </div>
-
-                
-                <div class="col" class="scoringRows">
-                    
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-
-                </div> 
-
-                <div class="col" class="scoringRows">
-                    
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-                </div> 
-
-                <div class="col" class="scoringRows">
-                    
-                    <div class="row-sml-score"> New Score </div>
-                    <div class="row-sml-score"> New Score </div>
-                </div> 
-            
-            
-            
-            </div>
-         <hr class="breaker2">
         </div>
-        
+
+        <div class="course-group" id="course-group-id">
+            <select class="form-control" id="course-select"></select>
+        </div>
+
+        <div id="newPlayerContent">
+
+            <div id="newPlayerText"> </div>
+
+        </div>
+
+        <div class="scrollable">
+            <hr class="breaker">
+            <div class="row" id="row-lrg">
+                <div class="col-sm-1" id="rowNumber">
+                    <span> 1</span>
+                    <br>
+                    <span> 2 </span>
+                    <br>
+                    <span> 3 </span>
+                    <br>
+                    <span> 4 </span>
+                    <br>
+                    <span> 5 </span>
+                    <br>
+                    <span> 6 </span>
+                    <br>
+                    <span> 7 </span>
+                    <br>
+                    <span> 8 </span>
+                    <br>
+                    <span> 9 </span>
+                    <br>
+                    <span> 10 </span>
+                    <br>
+                    <span> 11 </span>
+                    <br>
+                    <span> 12 </span>
+                    <br>
+                    <span> 13 </span>
+                    <br>
+                    <span> 14 </span>
+                    <br>
+                    <span> 15 </span>
+                    <br>
+                    <span> 16 </span>
+                    <br>
+                    <span> 17 </span>
+                    <br>
+                    <span> 18 </span>
+                    <br>
+                    <span class="golfTerms"> Yard </span>
+                    <br>
+                    <span class="golfTerms"> Par </span>
+                    <br>
+                    <span class="golfTerms"> HCP </span>
+                </div>
+
+                <div class="col" class="scoringRows">
+                    <div class="row-sml-score"> 2 </div>
+                    <div class="row-sml-score"> 6 </div>
+                    <div class="row-sml-score"> 8 </div>
+                </div>
+
+
+                <div class="col" class="scoringRows">
+
+                    <div class="row-sml-score"> New Score </div>
+                    <div class="row-sml-score"> New Score </div>
+                    <div class="row-sml-score"> New Score </div>
+
+                </div>
+
+                <div class="col" class="scoringRows">
+
+                    <div class="row-sml-score"> New Score </div>
+                    <div class="row-sml-score"> New Score </div>
+                    <div class="row-sml-score"> New Score </div>
+                </div>
+
+                <div class="col" class="scoringRows">
+
+                    <div class="row-sml-score"> New Score </div>
+                    <div class="row-sml-score"> New Score </div>
+                </div>
+
+
+
+            </div>
+            <hr class="breaker2">
+        </div>
+
         <div class="currentScoreDiv">
 
-            <div class="col"> 
+            <div class="col">
                 <div id="currentScoreWrapper">
                     <div class="col" class="currentRows">
-                    
+
                         <div class="row-sml-current"> Current </div>
-                        
+
                     </div>
-    
-                    
+
+
                     <div class="col" class="currentRows">
-                        
+
                         <div class="row-sml-current"> Current 2 </div>
-    
-                    </div> 
-    
+
+                    </div>
+
                     <div class="col" class="currentRows">
-                        
+
                         <div class="row-sml-current"> Current 3 </div>
 
-                    </div> 
-    
+                    </div>
+
                     <div class="col" class="currentRows">
-                        
+
                         <div class="row-sml-current"> Current 4 </div>
-                       
-                    </div> 
+
+                    </div>
                 </div>
-           </div>
-            
+            </div>
+
         </div>
 
 
     </div>
 
 
-    </body> 
+</body>
 
 </html>
