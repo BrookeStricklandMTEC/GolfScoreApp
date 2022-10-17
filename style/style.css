@@ -29,7 +29,6 @@ body, html {
     top: 50;
 }
 .newPlayerEntry{
-
     display: flex;
     justify-content: center;
     margin-top: 60px;
@@ -111,7 +110,6 @@ select{
     height: max-content;  
 }
 .row-sml-score{
-
     background-color: #dddd;
     opacity: 75%;
     border-radius: 4px;

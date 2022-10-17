@@ -1,28 +1,24 @@
 
-
-
 par = []
 yard = []
 hcp = []
+playerOne = [] 
+playerTwo = [] 
+playerThree = [] 
+playerFour= [] 
 
 
-// function golfScore(par, strokes) {
-//     if (strokes == 1) {
-//         return "Hole-in-one!";
-//     } else if (strokes <= par - 2) {
-//         return "Eagle";
-//     } else if (strokes == par - 1) {
-//         return "Birdie";
-//     } else if (strokes == par) {
-//         return "Par";
-//     } else if (strokes == par + 1) {
-//         return "Bogey";
-//     } else if (strokes == par + 2) {
-//         return "Double Bogey";
-//     } else {
-//         return "Go Home!";
-//     }
-// }
+// if a score is entered, update current score for that player, store it in player array. 
+
+
+// scoringList.innerHTML =
+// let scores = JSON.parse(localStorage.getItem('scoring')) || [];
+// scoring.map(score => {
+// console.log(`<li> ${score.username} ${score.score} </li>`);
+
+// }).join("")
+
+// console.log(scoring)
 
 // Notification for Finish
     // class Player {
@@ -33,11 +29,3 @@ hcp = []
     //     }
 //   }
 
-//scoringList.innerHTML =
-//const scoring = JSON.parse(localStorage.getItem('scoring')) || [];
-//scoring.map(score => {
-// console.log(`<li> ${score.username} ${score.score} </li>`);
-//
-//}).join("")
-//
-//console.log(scoring)

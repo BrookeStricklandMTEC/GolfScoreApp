@@ -1,7 +1,5 @@
 // Golf 
 
-// const { data } = require("jquery");
-
 // import scoring from '/scoring.js' 
 
 function getAvailableCourses() {
@@ -37,7 +35,7 @@ courseDiv.addEventListener('change', function () {
                 return res.json()
             })
             .then(data => {
-                console.log(data.data.holes[0].teeBoxes);
+
                 renderTee(data.data.holes[0].teeBoxes);
             })
             .catch(error => {
@@ -47,14 +45,12 @@ courseDiv.addEventListener('change', function () {
     }
     courseSelected2();
 });
-
 // courseSelect();
 let i = 0
 let newPlayerCounter = i++
 $('body').ready(function () {
     $('#newPlayerInput').keyup(function (a) {
         if (a.key == "Enter" && newPlayerCounter < 4) {
-            let newPlayer = $('#newPlayerInput').val()
             newPlayerCounter++
             $('#newPlayerText').append(
             `
@@ -64,8 +60,10 @@ $('body').ready(function () {
             `
             )
         }
+        let newPlayer = $('#newPlayerInput').val()
     })
 })
+
 
 // Course Select
 function renderCourses(courses) {
@@ -79,7 +77,6 @@ function renderCourses(courses) {
     });
     document.getElementById('course-select').innerHTML = courseOptionsHtml;
 }
-
 // Tee Box Select
 function renderTee(teeBox) {
     let teeBoxSelectHtml = '';
@@ -92,9 +89,6 @@ function renderTee(teeBox) {
     });
     document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 }
-
-
-
 
 // Notification for Finish
     // class Player {
