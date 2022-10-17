@@ -77,18 +77,46 @@ function renderCourses(courses) {
     });
     document.getElementById('course-select').innerHTML = courseOptionsHtml;
 }
-// Tee Box Select
+// Tee Box Select && Yard
 function renderTee(teeBox) {
     let teeBoxSelectHtml = '';
     teeBox.forEach((teeBox, index) => {
         teeBoxSelectHtml +=
         `
-        <option value="${index}">${teeBox.teeType.toUpperCase()}, ${teeBox.yards} yards</option>
+        <option value="${index}">${teeBox.teeType.toUpperCase()}</option>
         <option value="none" selected disabled hidden> Select Tshirt </option>
         `
     });
+
+    // let yardSelectHtml = '';
+    // yardage.forEach((yard, index) => {
+    //     yardSelectHtml +=
+    //     `
+    //     <span class="golfTerms"> Yardage  ${teeBox.yards.toUpperCase()} </span>
+    //     `
+    // });
+
+    // let parSelectHtml = '';
+    // par.forEach((par, index) => {
+    //     parSelectHtml +=
+    //     `
+    //     <span class="golfTerms"> Yardage  ${teeBox.par.toUpperCase()} </span>
+    //     `
+    // });
+
+    // let hcpSelectHtml = '';
+    // hcp.forEach((hcp, index) => {
+    //     hcpSelectHtml +=
+    //     `
+    //     <span class="golfTerms"> Yardage  ${teeBox.hcp.toUpperCase()} </span>
+    //     `
+    // });
+
     document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
+    // document.getElementsByClassName('golfTerms').innerHTML = yardSelectHtml , parSelectHtml , hcpSelectHtml; 
 }
+
+
 
 // Notification for Finish
     // class Player {
