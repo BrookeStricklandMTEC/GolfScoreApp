@@ -81,17 +81,19 @@ function renderCourses(courses) {
 }
 
 // Tee Box Select
-
-let teeBoxSelectHtml = ''
 function renderTee(teeBox) {
-    teeBox.forEach(function (teeBox, index) {
+    let teeBoxSelectHtml = '';
+    teeBox.forEach((teeBox, index) => {
         teeBoxSelectHtml +=
         `
-        <option value="${index}">${teeBox.teeType.toUpperCase()}, ${teeBox.totalYards} yards</option>
+        <option value="${index}">${teeBox.teeType.toUpperCase()}, ${teeBox.yards} yards</option>
         <option value="none" selected disabled hidden> Select Tshirt </option>
         `
     });
+    document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 }
+
+
 
 
 // Notification for Finish
