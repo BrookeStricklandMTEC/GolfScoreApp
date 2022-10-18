@@ -111,6 +111,7 @@ select{
 }
 .row-sml-score{
     background-color: #dddd;
+    border: none;
     opacity: 75%;
     border-radius: 4px;
     padding-left: 5px; 
@@ -119,6 +120,8 @@ select{
     margin-bottom: 26px;
     display: flex;
     justify-content: center;
+    width: inherit;  
+
 }
 .row-sml-current{
     margin-left: 39px;
@@ -176,6 +179,19 @@ select{
     #newPlayerContent{
         display: flex;
         flex-direction: row;
+    }
+    .row-sml-score{
+        background-color: #dddd;
+        width: inherit;  
+        border: none;
+        opacity: 75%;
+        border-radius: 4px;
+        padding-left: 5px; 
+        padding-right: 5px;
+        margin-top: 1px;
+        margin-bottom: 26px;
+        display: flex;
+        justify-content: center;
     }
 }
 

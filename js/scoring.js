@@ -1,7 +1,4 @@
 
-par = []
-yard = []
-hcp = []
 playerOne = [] 
 playerTwo = [] 
 playerThree = [] 
@@ -9,6 +6,8 @@ playerFour= []
 
 
 // if a score is entered, update current score for that player, store it in player array. 
+
+
 
 
 // scoringList.innerHTML =
