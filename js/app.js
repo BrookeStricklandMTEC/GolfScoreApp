@@ -64,7 +64,6 @@ $('body').ready(function () {
     })
 })
 
-
 // Course Select
 function renderCourses(courses) {
     let courseOptionsHtml = '';
@@ -77,15 +76,16 @@ function renderCourses(courses) {
     });
     document.getElementById('course-select').innerHTML = courseOptionsHtml;
 }
-// Tee Box Select && Yard
+// Tee Box Select && Golf Terms
 function renderTee(teeBox) {
     let teeBoxSelectHtml = '';
     teeBox.forEach((teeBox, index) => {
         teeBoxSelectHtml +=
         `
         <option value="${index}">${teeBox.teeType.toUpperCase()}</option>
-        <option value="none" selected disabled hidden> Select Tshirt </option>
+        <option value="none" selected disabled hidden> Select TeeBox </option>
         `
+
     });
 
     // let yardSelectHtml = '';
@@ -115,21 +115,7 @@ function renderTee(teeBox) {
     document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
     // document.getElementsByClassName('golfTerms').innerHTML = yardSelectHtml , parSelectHtml , hcpSelectHtml; 
 }
-function validate(evt) {
-    let theEvent = evt || window.event;
 
-    if (theEvent.type === 'paste') {
-        key = event.clipboardData.getData('text/plain');
-    } else {
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-    }
-    var regex = /[0-9]|\./;
-    if( !regex.test(key) ) {
-      theEvent.returnValue = false;
-      if(theEvent.preventDefault) theEvent.preventDefault();
-    }
-}
 
 
 // Notification for Finish
