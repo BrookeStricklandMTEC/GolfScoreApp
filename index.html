@@ -12,11 +12,10 @@
     <!-- Links -->
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/app.js" defer> </script>
     <script src="js/scoring.js"> </script>
-
     <!--  -->
 
     <!-- Styling -->
@@ -50,7 +49,7 @@
             </div>
             <div id="tee-box-wrapper">
                 <select id="tee-box-select">
-                    <option value="0"> Select TeeBox </option>
+                    <option value="0" > Select TeeBox </option>
                 </select>
             </div>
         </div>
@@ -105,16 +104,18 @@
                     <br>
                     <span> 18 </span>
                     <br>
-                    <span class="golfTerms"> Yardage  999 </span>
+                    <span class="golfTerms"> Yardage  </span>
+                    <span class="yardage"></span>
                     <br>
-                    <span class="golfTerms"> Par  999  </span>
+                    <span class="golfTerms"> Par </span>
+                    <span class="par"></span>
                     <br>
-                    <span class="golfTerms"> HCP 999 </span>
+                    <span class="golfTerms"> HCP </span>
+                    <span class="hcp"></span>
                 </div>
 
                 <div class="col" class="scoringRows" id="playerOneRow">
                     <input type='text' onkeypress='validate(event)' class="row-sml-score" maxlength="4" id="playerOneScore">
-                     <!-- new row-sml-score here -->
                 </div>
 
 
@@ -138,21 +139,21 @@
 
             <div class="col">
                 <div id="currentScoreWrapper">
-                    <div class="col" class="currentRows" id="playerOneScore">
-                        <div class="row-sml-current"> 16 </div>
+                    <div class="col" class="currentRows" id="playerOneCurrent">
+                        <div class="row-sml-current">  </div>
                     </div>
 
 
-                    <div class="col" class="currentRows" id="playerTwoScore">
-                        <div class="row-sml-current"> 23 </div>
+                    <div class="col" class="currentRows" id="playerTwoCurrent">
+                        <div class="row-sml-current">  </div>
                     </div>
 
-                    <div class="col" class="currentRows" id="playerThreeScore">
-                        <div class="row-sml-current"> -2 </div>
+                    <div class="col" class="currentRows" id="playerThreeCurrent">
+                        <div class="row-sml-current">  </div>
                     </div>
 
-                    <div class="col" class="currentRows" id="playerFourScore">
-                        <div class="row-sml-current"> 0 </div>
+                    <div class="col" class="currentRows" id="playerFourCurrent">
+                        <div class="row-sml-current">  </div>
                     </div>
                 </div>
             </div>

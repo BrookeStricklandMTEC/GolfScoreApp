@@ -121,7 +121,7 @@ select{
     justify-content: center;
     width: inherit;  
 }
-.row-sml-current{
+/* .row-sml-current{
     margin-left: 39px;
     padding-left: 3px; 
     padding-right: 3px;
@@ -130,6 +130,46 @@ select{
     opacity: 75%;
     display: flex;
     justify-content: center;
+} */
+#playerOneCurrent{
+    margin-left: 39px;
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 4px;
+    background-color: #dddd;
+    opacity: 75%;
+    display: flex;
+    justify-content: center; 
+}
+#playerTwoCurrent{
+    margin-left: 39px;
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 4px;
+    background-color: #dddd;
+    opacity: 75%;
+    display: flex;
+    justify-content: center; 
+}
+#playerThreeCurrent{
+    margin-left: 39px;
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 4px;
+    background-color: #dddd;
+    opacity: 75%;
+    display: flex;
+    justify-content: center; 
+}
+#playerFourCurrent{
+    margin-left: 39px;
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 4px;
+    background-color: #dddd;
+    opacity: 75%;
+    display: flex;
+    justify-content: center; 
 }
 #currentScoreWrapper{
     display: flex;
