@@ -121,16 +121,6 @@ select{
     justify-content: center;
     width: inherit;  
 }
-/* .row-sml-current{
-    margin-left: 39px;
-    padding-left: 3px; 
-    padding-right: 3px;
-    border-radius: 4px;
-    background-color: #dddd;
-    opacity: 75%;
-    display: flex;
-    justify-content: center;
-} */
 #playerOneCurrent{
     margin-left: 39px;
     padding-left: 3px; 

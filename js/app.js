@@ -1,9 +1,6 @@
-// Golf 
 
-let currentCourse = null; 
-let teeType = null; 
-
-
+let currentCourse = null;
+let teeType = null;
 function getAvailableCourses() {
     fetch('https://golf-courses-api.herokuapp.com/courses/',
         {
@@ -37,17 +34,16 @@ courseDiv.addEventListener('change', function () {
                 return res.json()
             })
             .then(data => {
-                currentCourse = data.data; 
+                currentCourse = data.data;
                 renderTee(data.data.holes[0].teeBoxes);
             })
             .catch(error => {
-                console.error(error); 
+                console.error(error);
                 console.log('error!');
             })
     }
     courseSelected2();
 });
-// courseSelect();
 let i = 0
 let newPlayerCounter = i++
 
@@ -56,7 +52,7 @@ $('body').ready(function () {
         if (a.key == "Enter" && newPlayerCounter < 4) {
             newPlayerCounter++
             $('#newPlayerText').append(
-            `
+                `
             <div class="newPlayerWrapper"> 
                  ${$('#newPlayerInput').val()} 
             </div>
@@ -70,8 +66,8 @@ $('body').ready(function () {
 function renderCourses(courses) {
     let courseOptionsHtml = '';
     courses.forEach((course) => {
-        courseOptionsHtml += 
-        `
+        courseOptionsHtml +=
+            `
         <option value="${course.id}">${course.name}</option>
         <option value="none" selected disabled hidden> Select Course </option>  
         `;
@@ -83,7 +79,7 @@ function renderTee(teeBox) {
     let teeBoxSelectHtml = '';
     teeBox.forEach((teeBox) => {
         teeBoxSelectHtml +=
-        `
+            `
         <option value="${teeBox.teeType}">${teeBox.teeType.toUpperCase()}</option>
         <option value="none" selected disabled hidden> Select TeeBox </option>
         `
@@ -91,59 +87,48 @@ function renderTee(teeBox) {
 
     document.getElementById('tee-box-select').innerHTML = teeBoxSelectHtml;
 }
-
-
-
-document.getElementById('tee-box-select').addEventListener('change', function(event){
+document.getElementById('tee-box-select').addEventListener('change', function (event) {
     teeType = event.target.value;
-    renderYardage(); 
+    renderYardage();
     renderPar();
     renderHCP();
 });
-
-function renderYardage(){
+function renderYardage() {
     const totalYardage = getTotalYardage();
     const yardageElement = document.querySelector('.yardage');
 
     yardageElement.textContent = totalYardage;
-    
-}
 
+}
 function getTotalYardage() {
     const holes = currentCourse.holes;
     const yards = holes.map(holeItem => holeItem.teeBoxes.find(teeBoxItem => teeBoxItem.teeType === teeType).yards);
 
-    return yards.reduce((totalYards, yardItem) => totalYards + yardItem, 0)    
+    return yards.reduce((totalYards, yardItem) => totalYards + yardItem, 0)
 }
-
-
-function renderPar(){
+function renderPar() {
     const totalPar = getTotalPar();
     const ParElement = document.querySelector('.par');
 
     ParElement.textContent = totalPar;
-    
-}
 
+}
 function getTotalPar() {
     const holes = currentCourse.holes;
     const par = holes.map(holeItem => holeItem.teeBoxes.find(teeBoxItem => teeBoxItem.teeType === teeType).par);
 
-    return par.reduce((totalPar, parItem) => totalPar + parItem, 0)    
+    return par.reduce((totalPar, parItem) => totalPar + parItem, 0)
 }
-
-function renderHCP(){
+function renderHCP() {
     const totalHCP = getTotalHCP();
     const HCPElement = document.querySelector('.hcp');
 
     HCPElement.textContent = totalHCP;
-    
-}
 
+}
 function getTotalHCP() {
     const holes = currentCourse.holes;
     const hcp = holes.map(holeItem => holeItem.teeBoxes.find(teeBoxItem => teeBoxItem.teeType === teeType).hcp);
 
-    return hcp.reduce((totalHCP, HCPItem) => totalHCP + HCPItem, 0)    
+    return hcp.reduce((totalHCP, HCPItem) => totalHCP + HCPItem, 0)
 }
-
